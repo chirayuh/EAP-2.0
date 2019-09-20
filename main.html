@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body ng-app="homepage" ng-controller="myCtrl">
+		<div class="card-panel deep-purple darken-3"><h5 class="white-text text-darken-2 , center-align">Ellucian EAP Approval Form</h5></div>
+	  <div class="progress">
+			<div class="determinate" style="width: 70%"></div>
+	  </div>
+		<div class="row">
+				<form class="col s12">
+				  <div class="row">
+					<div class="input-field inline col s4">
+					  <input id="name" type="text" class="validate" required="">
+					  <label for="name">Name</label>
+					</div>
+					<div class="input-field inline col s4">
+						<input id="email" type="email" class="validate">
+							<label for="email">Email<i class="material-icons left">email</i></label>
+							<span class="helper-text" data-error="In-valid email-id" data-success="Valid email-id"></span>
+					</div>
+					<div class="input-field inline col s4">
+							<input id="empid" type="text" class="validate">
+							<label for="empid">Empid</label>
+					</div>
+				 </div>
+
+				 <div class="row">
+						<div class="input-field inline col s6">
+								<input id="team" type="text" class="validate">
+								<label for="team">Team</label>
+						</div>
+						<div class="input-field inline col s6">
+								<input id="Title" type="text" class="validate">
+								<label for="Title">Title</label>
+						</div>
+				 </div>
+				 <div class="row">
+					<div class="input-field inline col s6">
+							<input id="Approver_Name" type="text" class="validate">
+							<label for="Approver_Name">Approver Name</label>
+					</div>
+					<div class="input-field inline col s6">
+							<input id="Approver_Email_ID" type="email" class="validate">
+							<label for="Approver_Email_ID">Approver Email ID<i class="material-icons left">email</i></label>
+					</div>
+				 </div>
+					<h6 class="red-text text-darken-2  center-align">Provide the details of the cource / program that you wish to attend</h6>
+			 </div>
+
+
+				 <div class="center-align">
+						<button class="btn waves-effect deep-purple darken-3" type="submit" name="action">Submit</button>
+				 </div>
+				 
+				</form>
+			  </div>
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="homepage.js"></script>
+  </body>
+</html>

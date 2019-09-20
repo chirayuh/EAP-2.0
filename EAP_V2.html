@@ -20,43 +20,225 @@
 				<form class="col s12">
 				  <div class="row">
 					<div class="input-field inline col s4">
-					  <input id="name" type="text" class="validate">
-					  <label for="name">Name</label>
+					  <input id="name" type="text" class="validate" required="true">
+					  <label for="name">Name<i class="material-icons left">person</i></label>
 					</div>
 					<div class="input-field inline col s4">
-						<input id="email" type="email" class="validate">
+						<input id="email" type="email" class="validate" required="true">
 							<label for="email">Email<i class="material-icons left">email</i></label>
 							<span class="helper-text" data-error="In-valid email-id" data-success="Valid email-id"></span>
 					</div>
 					<div class="input-field inline col s4">
-							<input id="empid" type="text" class="validate">
-							<label for="empid">Empid</label>
+							<input id="empid" type="text" class="validate" required="true">
+							<label for="empid">Empid<i class="material-icons left">fingerprint</i></label>
 					</div>
 				 </div>
 
 				 <div class="row">
 						<div class="input-field inline col s6">
-								<input id="team" type="text" class="validate">
-								<label for="team">Team</label>
+								<input id="team" type="text" class="validate" required="true">
+								<label for="team">Team<i class="material-icons left">group</i></label>
 						</div>
 						<div class="input-field inline col s6">
 								<input id="Title" type="text" class="validate">
-								<label for="Title">Title</label>
+								<label for="Title">Title<i class="material-icons left">title</i></label>
 						</div>
 				 </div>
 				 <div class="row">
 					<div class="input-field inline col s6">
-							<input id="Approver_Name" type="text" class="validate">
-							<label for="Approver_Name">Approver Name</label>
+							<input id="Approver_Name" type="text" class="validate" required="true">
+							<label for="Approver_Name">Approver Name<i class="material-icons left">supervisor_account</i></label>
 					</div>
 					<div class="input-field inline col s6">
-							<input id="Approver_Email_ID" type="email" class="validate">
-							<label for="Approver_Email_ID">Approver Email ID<i class="material-icons left">email</i></label>
+							<input id="Approver_Email_ID" type="email" class="validate" required="true"
+							<label for="Approver_Email_ID">Approver Email ID<i class="material-icons left">contact_mail</i></label>
 					</div>
 				 </div>
 					<h6 class="red-text text-darken-2  center-align">Provide the details of the cource / program that you wish to attend</h6>
 			 </div>
+			 <div class="row">
+				<div class="input-field inline col s12">
+					<input id="Program" type="text" class="validate" required="true">
+					<label for="Program">Program</label>
+			</div>
+			 </div>
+			 <div class="row">
+			 <div class="input-field col s4">
+				<select id="Method" required="true">
+				  <option value="" disabled selected>Choose your option</option>
+				  <option value="1">Option 1</option>
+				  <option value="2">Option 2</option>
+				  <option value="3">Option 3</option>
+				</select>
+				<label for="Method">Method</label>
+			  </div>
+			  <div class="input-field col s4">
+				<select id="Category" required="true">
+				  <option value="" disabled selected>Choose your option</option>
+				  <option value="1">Option 1</option>
+				  <option value="2">Option 2</option>
+				  <option value="3">Option 3</option>
+				</select>
+				<label for="Category">Category</label>
+			  </div>
+			  <div class="input-field col s4">
+				<select id="Area" required="true">
+				  <option value="" disabled selected>Choose your option</option>
+				  <option value="1">Option 1</option>
+				  <option value="2">Option 2</option>
+				  <option value="3">Option 3</option>
+				</select>
+				<label for="Area">Area</label>
+			  </div>
+			</div>
+			<div class="row">
+				<div class="input-field inline col s6">
+					<input id="Name_Agency" type="text" class="validate" required="true">
+					<label for="Name_Agency">Name of Univ/College/Institute/Certifying Agency<i class="material-icons left">book</i></label>
+				</div>
+				<div class="input-field inline col s6">
+					<input id="Address_Agency" type="text" class="validate" required="true">
+					<label for="Address_Agency">Address of Univ/College<i class="material-icons left">art_track</i></label>
+				</div>
+			</div>
+			<div class="row">
+					<div class="input-field inline col s6">
+						<input id= "Estimated_Start_Date" type="text" class="datepicker" required="true">
+						<label for="Estimated_Start_Date">Estimated Start Date<i class="material-icons left">date_range</i></label>
+					</div>
+					<div class="input-field inline col s6">
+						<input id="Estimated_Completion_Date" type="text" class="datepicker" required="true">
+						<label for="Estimated_Completion_Date">Estimated Completion Date<i class="material-icons left">date_range</i></label>
+					</div>
+				
+			</div>
 
+			<div class="row">
+					<h6 class="red-text text-darken-2  center-align">How do you think this program will benefit you in your current / new role?</h6>
+					<h6 class="red-text text-darken-2  center-align">Please explain in clear and definite terms as this will strongly influence the approval of your request</h6>
+			</div>
+
+			<div class="row">
+					<div class="input-field col s4">
+					  <i class="material-icons prefix">mode_edit</i>
+					  <textarea id="Benefit_to_yourself" class="materialize-textarea" required="true"></textarea>
+					  <label for="Benefit_to_yourself">Benefit to yourself</label>
+					</div>
+					<div class="input-field col s4">
+							<i class="material-icons prefix">mode_edit</i>
+							<textarea id="Benefit_to_the_Organization" class="materialize-textarea" required="true"></textarea>
+							<label for="Benefit_to_the_Organization">Benefit to the Organization</label>
+					</div>
+					<div class="input-field col s4">
+							<i class="material-icons prefix">mode_edit</i>
+							<textarea id="Benefit_to_the_Team" class="materialize-textarea" required="true"></textarea>
+							<label for="Benefit_to_the_Team">Benefit to the Team</label>
+					 </div>
+			</div>
+			<div class="row">
+					<div class="input-field col s6">
+							<select id="Approver_Remarks">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="Approver_Remarks">Approver Remarks</label>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="Approver_Remarks_Details" type="text" class="validate">
+							<label for="Approver_Remarks_Details">Approver Remarks Details</label>
+							<span class="helper-text">Please provide an explanation for your remark</span>
+					</div>
+			</div>
+
+			<div class="row">
+					<div class="input-field col s6">
+							<select id="HR_Remarks">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="HR_Remarks">HR Remarks</label>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="HR_Remarks_Details" type="text" class="validate">
+							<label for="HR_Remarks_Details">HR Remarks Details</label>
+							<span class="helper-text">Please provide an explanation for your remark</span>
+					</div>
+
+			</div>
+			<div class="row">
+					<h6 class="red-text text-darken-2  center-align">Reimbursement details (for use by the HR team)</h6>
+			</div>
+			<div class="row">
+
+					<div class="input-field col s6">
+							<select id="Expense_Head_1" required="true">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="Expense_Head_1">Expense Head 1</label>
+							<span class="helper-text">Pick one or Type</span>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="Amount_1" type="number" class="validate" required="true">
+							<label for="Amount_1">Amount 1</label>
+					</div>
+
+			</div>
+			<div class="row">
+
+					<div class="input-field col s6">
+							<select id="Expense_Head_2">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="Expense_Head_2">Expense Head 2</label>
+							<span class="helper-text">Pick one or Type</span>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="Amount_2" type="number" class="validate">
+							<label for="Amount_2">Amount 2</label>
+					</div>
+			</div>
+			<div class="row">
+					<div class="input-field col s6">
+							<select id="Expense_Head_3">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="Expense_Head_3">Expense Head 3</label>
+							<span class="helper-text">Pick one or Type</span>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="Amount_3" type="number" class="validate">
+							<label for="Amount_3">Amount 3</label>
+					</div>
+			</div>
+			<div class="row">
+					<div class="input-field col s6">
+							<select id="Expense_Head_4">
+							  <option value="" disabled selected>Choose your option</option>
+							  <option value="1">Option 1</option>
+							  <option value="2">Option 2</option>
+							  <option value="3">Option 3</option>
+							</select>
+							<label for="Expense_Head_4">Expense Head 4</label>
+							<span class="helper-text">Pick one or Type</span>
+					 </div>
+					 <div class="input-field inline col s6">
+							<input id="Amount_4" type="number" class="validate">
+							<label for="Amount_4">Amount 4</label>
+					</div>
+			</div>
 
 				 <div class="center-align">
 						<button class="btn waves-effect deep-purple darken-3" type="submit" name="action">Submit</button>
