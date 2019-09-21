@@ -14,10 +14,10 @@
   <body ng-app="homepage" ng-controller="myCtrl">
 		<div class="card-panel deep-purple darken-3"><h5 class="white-text text-darken-2 , center-align">Ellucian EAP Approval Form</h5></div>
 	  <div class="progress">
-			<div class="determinate" style="width: 70%"></div>
+			<div class="determinate" id="progress"></div>
 	  </div>
 		<div class="row">
-				<form class="col s12">
+				<form class="col s12" id="Eapform">
 				  <div class="row">
 					<div class="input-field inline col s4">
 					  <input id="name" type="text" class="validate" required="true"/>
@@ -185,7 +185,7 @@
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
 					 <div class="input-field inline col s6">
-							<input id="Amount_1" type="number" class="validate" required="true"/>
+							<input id="Amount_1" type="number" class="validate" required="true" onchange="change()"/>
 							<label for="Amount_1">Amount 1</label>
 					</div>
 
@@ -203,7 +203,7 @@
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
 					 <div class="input-field inline col s6">
-							<input id="Amount_2" type="number" class="validate"/>
+							<input id="Amount_2" type="number" class="validate" onchange="change()"/>
 							<label for="Amount_2">Amount 2</label>
 					</div>
 			</div>
@@ -219,7 +219,7 @@
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
 					 <div class="input-field inline col s6">
-							<input id="Amount_3" type="number" class="validate"/>
+							<input id="Amount_3" type="number" class="validate" onchange="change()"/>
 							<label for="Amount_3">Amount 3</label>
 					</div>
 			</div>
@@ -235,15 +235,15 @@
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
 					 <div class="input-field inline col s6">
-							<input id="Amount_4" type="number" class="validate"/>
+							<input id="Amount_4" type="number" class="validate" onchange="change()"/>
 							<label for="Amount_4">Amount 4</label>
 					</div>
 			</div>
 
 			<div class="row">
 				<div class="input-field inline col s6 right">
-					<input id="Total" type="number" class="validate" readonly disabled/>
-					<label for="Total">Total</label>
+					<span class="helper-text">Total</span>
+					<input id="Total" type="number" class="validate" readonly tabindex="-1" />
 				</div>
 			</div>
 
