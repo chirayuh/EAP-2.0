@@ -3,7 +3,7 @@
   <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/googleapi.css" rel="stylesheet">
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	
@@ -59,7 +59,7 @@
 
 			<div class="row">
 					<h6 class="red-text text-darken-2  center-align">Provide the details of the cource / program that you wish to attend</h6>
-					<div class="input-field inline col s6">
+					<div class="input-field inline col s12">
 							<input id="Program" type="text" class="validate" required="true"/>
 							<label for="Program">Program</label>
 					</div>
@@ -67,30 +67,40 @@
 			
 			<div class="row">
 				<div class="input-field col s4">
-				<select id="Method" required="true" class="validate">
-					<option value="" disabled selected>Choose your option</option>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
-				</select>
+				<input id="Method_text" type="text" list="Method" class="validate" required="true" placeholder="Choose or Type your option"/>	
+				<datalist id="Method" required="true" class="validate">
+					<option>Classroom-Instructor Led</option>
+					<option>Distance learning w/o classes</option>
+					<option>Distance learning with classes</option>
+					<option>Self Learning</option>
+					<option>Other</option>
+				</datalist>
 				<label for="Method">Method</label>
 				</div>
 				<div class="input-field col s4">
-					<select id="Category" required="true" class="validate">
-					<option value="" disabled selected>Choose your option</option>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
-					</select>
+					<input id="Category_text" type="text" list="Category" class="validate" required="true" placeholder="Choose or Type your option"/>
+					<datalist id="Category" required="true" class="validate">
+					<option>Certification</option>
+					<option>Conference</option>
+					<option>Degree</option>
+					<option>Diploma</option>
+					<option>Seminar</option>
+					<option>Training</option>
+					<option>Others</option>
+					</datalist>
 					<label for="Category">Category</label>
 				</div>
 				<div class="input-field col s4">
-					<select id="Area" required="true" class="validate">
-					<option value="" disabled selected>Choose your option</option>
-					<option value="1">Option 1</option>
-					<option value="2">Option 2</option>
-					<option value="3">Option 3</option>
-					</select>
+					<input id="Area_text" type="text" list="Area" class="validate" required="true" placeholder="Choose or Type your option"/>
+					<datalist id="Area" required="true" class="validate">
+					<option>Microsoft</option>
+					<option>Java</option>
+					<option>IBM</option>
+					<option>Oracle</option>
+					<option>QA</option>
+					<option>Project Management</option>
+					<option>Others</option>
+					</datalist>
 					<label for="Area">Area</label>
 				</div>
 			</div>
@@ -140,12 +150,12 @@
 			</div>
 			<div class="row">
 					<div class="input-field col s6">
-							<select id="Approver_Remarks">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="Approver_Remarks_text" type="text" list="Approver_Remarks" class="validate" placeholder="Choose or Type your option"/>
+							<datalist id="Approver_Remarks">
+							  <option>Business Need</option>
+							  <option>Personal Need</option>
+							  <option>Rejected</option>
+							</datalist>
 							<label for="Approver_Remarks">Approver Remarks</label>
 					 </div>
 					 <div class="input-field inline col s6">
@@ -157,12 +167,11 @@
 
 			<div class="row">
 					<div class="input-field col s6">
-							<select id="HR_Remarks" class="validate">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="HR_Remarks_text" type="text" list="HR_Remarks" class="validate" placeholder="Choose or Type your option"/>
+							<datalist id="HR_Remarks" class="validate">
+							  <option>Approved</option>
+							  <option>Rejected</option>
+							</datalist>
 							<label for="HR_Remarks">HR Remarks</label>
 					 </div>
 					 <div class="input-field inline col s6" class="validate">
@@ -178,12 +187,15 @@
 			<div class="row">
 
 					<div class="input-field col s6">
-							<select id="Expense_Head_1" required="true" class="validate">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="Expense_Head_1_text" type="text" list="Expense_Head_1" class="validate" required="true" placeholder="Choose or Type your option"/>
+							<datalist id="Expense_Head_1" required="true" class="validate">
+									<option>Certification Fees</option>
+									<option>Course Registration</option>
+									<option>Annual Fees</option>
+									<option>Examination Fees</option>
+									<option>Seminar/Conference Fees</option>
+									<option>Others</option>
+							</datalist>
 							<label for="Expense_Head_1">Expense Head 1</label>
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
@@ -196,12 +208,15 @@
 			<div class="row">
 
 					<div class="input-field col s6">
-							<select id="Expense_Head_2" class="validate">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="Expense_Head_2_text" type="text" list="Expense_Head_2" class="validate" placeholder="Choose or Type your option"/>
+							<datalist id="Expense_Head_2" class="validate">
+									<option>Certification Fees</option>
+									<option>Course Registration</option>
+									<option>Annual Fees</option>
+									<option>Examination Fees</option>
+									<option>Seminar/Conference Fees</option>
+									<option>Others</option>
+							</datalist>
 							<label for="Expense_Head_2">Expense Head 2</label>
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
@@ -212,12 +227,15 @@
 			</div>
 			<div class="row">
 					<div class="input-field col s6">
-							<select id="Expense_Head_3" class="validate">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="Expense_Head_3_text" type="text" list="Expense_Head_3" class="validate" placeholder="Choose or Type your option"/>
+							<datalist id="Expense_Head_3" class="validate">
+									<option>Certification Fees</option>
+									<option>Course Registration</option>
+									<option>Annual Fees</option>
+									<option>Examination Fees</option>
+									<option>Seminar/Conference Fees</option>
+									<option>Others</option>
+							</datalist>
 							<label for="Expense_Head_3">Expense Head 3</label>
 							<span class="helper-text">Pick one or Type</span>
 					 </div>
@@ -228,12 +246,15 @@
 			</div>
 			<div class="row">
 					<div class="input-field col s6">
-							<select id="Expense_Head_4" class="validate">
-							  <option value="" disabled selected>Choose your option</option>
-							  <option value="1">Option 1</option>
-							  <option value="2">Option 2</option>
-							  <option value="3">Option 3</option>
-							</select>
+							<input id="Expense_Head_4_text" type="text" list="Expense_Head_4" class="validate" placeholder="Choose or Type your option"/>
+							<datalist id="Expense_Head_4" class="validate">
+									<option>Certification Fees</option>
+									<option>Course Registration</option>
+									<option>Annual Fees</option>
+									<option>Examination Fees</option>
+									<option>Seminar/Conference Fees</option>
+									<option>Others</option>
+							</datalist>
 							<label for="Expense_Head_4">Expense Head 4</label>
 							<span class="helper-text">Pick one or Type</span>
 					 </div>

@@ -18,9 +18,9 @@ function change() {
 };
 function validatesubmit(){
         if(form.name.value!='' && form.email.value!='' && form.empid.value!='' && form.Title.value!='' && form.Approver_Name.value!='' &&  form.Approver_Email_ID.value!=''
-      && form.Program.value!='' && form.Method.value!='' && form.Category.value!='' && form.Area.value !='' && form.Name_Agency.value!='' && form.Address_Agency.value!=''
+      && form.Program.value!='' && form.Method_text.value!='' && form.Category_text.value!='' && form.Area_text.value !='' && form.Name_Agency.value!='' && form.Address_Agency.value!=''
       && form.Estimated_Start_Date.value!='' && form.Estimated_Completion_Date.value!='' && form.Benefit_to_yourself.value!='' && form.Benefit_to_the_Organization.value !=''
-      &&  form.Benefit_to_the_Team.value!='' && form.Expense_Head_1.value!='' && form.Amount_1.value!='') {
+      &&  form.Benefit_to_the_Team.value!='' && form.Expense_Head_1_text.value!='' && form.Amount_1.value!='') {
         console.log("Submit validation");
         document.getElementById('Submit').disabled =false;
       }
@@ -37,9 +37,9 @@ form.addEventListener('submit',(e) => {
     Approver_Name: form.Approver_Name.value,
     Approver_Email_ID: form.Approver_Email_ID.value,
     Program: form.Program.value,
-    Method: form.Method.value,
-    Category: form.Category.value,
-    Area: form.Area.value,
+    Method: form.Method_text.value,
+    Category: form.Category_text.value,
+    Area: form.Area_text.value,
     Name_Agency: form.Name_Agency.value,
     Address_Agency: form.Address_Agency.value,
     Estimated_Start_Date: form.Estimated_Start_Date.value,
@@ -47,17 +47,17 @@ form.addEventListener('submit',(e) => {
     Benefit_to_yourself: form.Benefit_to_yourself.value,
     Benefit_to_the_Organization: form.Benefit_to_the_Organization.value,
     Benefit_to_the_Team: form.Benefit_to_the_Team.value,
-    Approver_Remarks: form.Approver_Remarks.value,
+    Approver_Remarks: form.Approver_Remarks_text.value,
     Approver_Remarks_Details: form.Approver_Remarks_Details.value,
-    HR_Remarks: form.HR_Remarks.value,
+    HR_Remarks: form.HR_Remarks_text.value,
     HR_Remarks_Details: form.HR_Remarks_Details.value,
-    Expense_Head_1: form.Expense_Head_1.value,
+    Expense_Head_1: form.Expense_Head_1_text.value,
     Amount_1: form.Amount_1.value,
-    Expense_Head_2: form.Expense_Head_2.value,
+    Expense_Head_2: form.Expense_Head_2_text.value,
     Amount_2: form.Amount_2.value,
-    Expense_Head_3: form.Expense_Head_3.value,
+    Expense_Head_3: form.Expense_Head_3_text.value,
     Amount_3: form.Amount_3.value,
-    Expense_Head_4: form.Expense_Head_4.value,
+    Expense_Head_4: form.Expense_Head_4_text.value,
     Amount_4: form.Amount_4.value,
   });
   form.reset();
