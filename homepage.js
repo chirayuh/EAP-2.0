@@ -62,5 +62,5 @@ form.addEventListener('submit',(e) => {
   });
   form.reset();
   document.getElementById('Submit').disabled =true;
-  console.log("EAP form is submitted !!!");
+  M.toast({html: 'EAP form is submitted !!!'});
 });
